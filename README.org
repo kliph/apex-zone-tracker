@@ -1,0 +1,11 @@
+* Apex Zone Tracker
+An application for keeping track of Apex Legends [[https://apexlegends.fandom.com/wiki/The_Ring][Zone]] locations
+
+** TODO
+- [ ] Add custom app, document, and hello world index
+- [ ] Initial commit
+- [ ] Document how to run it
+- [ ] Document how to deploy
+- [ ] Canvas rendered over map
+- [ ] Canvas draws circles when you click
+- [ ] Make coordinates reasonably similar to Apex's actual map coordinates
