@@ -15,16 +15,16 @@ const Layout = styled.div`
   justify-content: center;
 `;
 
-const Container = styled.div`
-  width: 80%;
-`;
-
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({
+  Component,
+  pageProps,
+}: {
+  Component: any;
+  pageProps: any;
+}) {
   return (
     <Layout>
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </Layout>
   );
 }
