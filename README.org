@@ -9,7 +9,8 @@ You can run the development server by running
 #+end_src
 
 * Deploying to production
-This application is deployed using [[https://vercel.com/docs/concepts/projects/overview][Vercel]].  To deploy simply merge to the =main= branch on github.  To configure the project, sign in to Vercel.
+This application is deployed using [[https://vercel.com/docs/concepts/projects/overview][Vercel]].  To deploy simply merge to the =main= branch on github.  To configure the project, [[https://vercel.com/login][sign in to Vercel]].
 
 * TODO
+- [ ] Clean up extra project in
 - [ ] Make coordinates reasonably similar to Apex's actual map coordinates

@@ -15,7 +15,7 @@ const MapOverlay = styled.svg`
 `;
 
 const MapContainer = styled.div`
-	position: relative;
+  position: relative;
 `;
 
 /* const RING_DIAMETERS = [279, 170, 103, 26, 20, 10]; */
@@ -27,7 +27,7 @@ export default function Home(_props: any) {
 
   const setMapContainerRef = (element: HTMLDivElement) => {
     mapContainer = element;
-  }
+  };
 
   function handleClick(evt: any) {
     setRingNumber(ringNumber + 1);
@@ -50,7 +50,7 @@ export default function Home(_props: any) {
         <MapOverlay width="1012" height="1013">
           {rings}
         </MapOverlay>
-        <Image src={bloodMoonMap} alt="Blood Moon Map" />
+        <Image src={bloodMoonMap} alt="Blood Moon Map" priority={true} />
       </MapContainer>
     </>
   );
