@@ -8,9 +8,8 @@ You can run the development server by running
 	yarn dev
 #+end_src
 
+* Deploying to production
+This application is deployed using [[https://vercel.com/docs/concepts/projects/overview][Vercel]].  To deploy simply merge to the =main= branch on github.  To configure the project, sign in to Vercel.
 
-** TODO
-- [ ] Document how to deploy
-- [ ] Canvas rendered over map
-- [ ] Canvas draws circles when you click
+* TODO
 - [ ] Make coordinates reasonably similar to Apex's actual map coordinates
