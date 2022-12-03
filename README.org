@@ -1,10 +1,15 @@
 * Apex Zone Tracker
 An application for keeping track of Apex Legends [[https://apexlegends.fandom.com/wiki/The_Ring][Zone]] locations
 
+* Running the development server
+You can run the development server by running
+
+#+begin_src sh
+	yarn dev
+#+end_src
+
+
 ** TODO
-- [ ] Add custom app, document, and hello world index
-- [ ] Initial commit
-- [ ] Document how to run it
 - [ ] Document how to deploy
 - [ ] Canvas rendered over map
 - [ ] Canvas draws circles when you click
