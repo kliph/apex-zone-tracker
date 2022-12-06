@@ -12,5 +12,11 @@ You can run the development server by running
 This application is deployed using [[https://vercel.com/docs/concepts/projects/overview][Vercel]].  To deploy simply merge to the =main= branch on github.  To configure the project, [[https://vercel.com/login][sign in to Vercel]].
 
 * TODO
-- [ ] Clean up extra project in
+- [X] Clean up extra project in Vercel
+- [ ] Make PWA work properly
 - [ ] Make coordinates reasonably similar to Apex's actual map coordinates
+- [X] Lock in ring location
+- [ ] Tangent lock when clicking and dragging
+- [ ] Change ring size based on current zone number
+- [ ] Persist the ring centers for a single match (Possibly using a separate backend app)
+- [ ] Validate that new ring centers do not go outside of the previous ring's radius
