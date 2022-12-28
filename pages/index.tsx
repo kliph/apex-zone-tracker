@@ -40,18 +40,41 @@ export default function Home(_props: any) {
     if (rings.length - 1 === ringNumber) {
       rings.pop()
     };
-    setRings([
-      ...rings,
-      <circle
-        cx={evt.clientX - mapContainer!.offsetLeft}
-        cy={evt.clientY - mapContainer!.offsetTop}
-        r={RING_DIAMETERS[ringNumber]}
-        stroke="red"
-        strokeWidth="2"
-        fill="none"
-        key={ringNumber}
-      />,
-    ]);
+    var x_prior, x_curr, y_prior, y_curr, r_prior, r_curr, dist
+
+    x_curr = evt.clientX - mapContainer!.offsetLeft
+    y_curr = evt.clientY - mapContainer!.offsetTop
+    r_curr = RING_DIAMETERS[ringNumber]
+
+    x_prior = Infinity
+    y_prior = Infinity
+    r_prior = Infinity
+
+    if (ringNumber > 0){
+      x_prior = rings[ringNumber - 1]["props"]["cx"]
+      y_prior = rings[ringNumber - 1]["props"]["cy"]
+      r_prior = RING_DIAMETERS[ringNumber - 1]
+    }
+
+    dist = Math.sqrt((x_curr - x_prior)**2 + (y_curr - y_prior)**2)
+
+    if (ringNumber == 0 || dist < (r_prior - r_curr)){
+
+      setRings([
+        ...rings,
+        <circle
+          cx={evt.clientX - mapContainer!.offsetLeft}
+          cy={evt.clientY - mapContainer!.offsetTop}
+          r={RING_DIAMETERS[ringNumber]}
+          stroke="red"
+          strokeWidth="2"
+          fill="none"
+          key={ringNumber}
+        />,
+      ]);
+    } else {
+      alert("Ring is out-of-bounds!")
+    }
   }
 
   function handleSaveRingPosition() {
